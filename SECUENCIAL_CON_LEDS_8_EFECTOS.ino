@@ -1,28 +1,28 @@
-#define PUL A3
+#define L A3
 
-#define FOQUITO 4
+#define LUZ 4
 int lectura;
 boolean ACTIVADO=0;
 
 void setup() {
 
-pinMode (PUL, INPUT);
+pinMode (L, INPUT);
 Serial.begin(9600);
-pinMode (FOQUITO, OUTPUT);
+pinMode (LUZ, OUTPUT);
 
 }
 
 void loop() {
 
-lectura = analogRead(FOQUITO);
+lectura = analogRead(LUZ);
 
 Serial.println(lectura);
 delay(100);
 if (lectura < 280){
-  digitalWrite(FOQUITO,HIGH);
+  digitalWrite(LUZ,HIGH);
   }
 if(lectura > 281){
-  digitalWrite(FOQUITO,LOW);
+  digitalWrite(LUZ,LOW);
   }
 
 }
