@@ -14,7 +14,7 @@ pinMode (LUZ, OUTPUT);
 
 void loop() {
 
-lectura = analogRead(LUZ);
+lectura = analogRead(L);
 
 Serial.println(lectura);
 delay(100);
